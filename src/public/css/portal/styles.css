@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  color: white;
+}
+
+body{
+    line-height: 1.6;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background: url(/media/bg_2.jpg);
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: none;
+  opacity: 0; */
+  transition: opacity 1s ease-in;
+}
+
+form {
+    display: flex;
+  }
+  
+  .log-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+  }
+
+  .bg_form{
+      background: #0000004b;
+      width: 400px;
+      height: 450px;
+  }
+  
+  span {
+    color: #5581b5;
+  }
+  
+  .log-right {
+    margin-left: 20px;
+  }
+  
+  .passInput {
+    width: 250px;
+    height: 30px;
+    margin-bottom: 10px;
+    background: none;
+    outline: none;
+    border: 0.5px solid white;
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .passInput::placeholder {
+    color: white;
+  }
+  
+  .passInput1{
+    width: 220px;
+    height: 30px;
+    background: none;
+    outline: none;
+    border: 0.5px solid white;
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .passInput1::placeholder {
+    color: white;
+  }
+  
+  .butLogin {
+    outline: none;
+    border: none;
+    outline: none;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    width: 95%;
+  }
+  
+  .butLogin:hover {
+    background: #5d6061;
+    color: #fff;
+  }
+  
+  .imgLogin {
+    height: 90px;
+    animation: fadeIn 0.5s forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+    position: relative;
+    top: 10px;
+  }
+  
+  .fade-in {
+    animation: fadeIn ease 2s;
+  }
+  
+  .spn:hover{
+  cursor: pointer;
+  }
+  
+  .fa-eye{
+    color: #000000;
+    cursor: pointer;
+  }
+  .fa-eye-slash{
+    color: #ad0000;
+    cursor: pointer;
+  }
+  
+  .fa-arrow-circle-left{
+    font-size: 25px;
+    padding: 10px;
+  }
+  
+  .fa-arrow-circle-left:hover{
+   color:#4d4d4d;
+  }
+  
+  @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+  }
+  
+  .title {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    justify-content: center;
+  }
+  .title h1 {
+    color: #fff;
+    font-size: 3rem;
+    animation: mainFadeIn 1.5s forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+  }
+  
+  .title h1 span {
+    width:0px;
+    height: 0px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+  
+    background: #ad6a42;
+    -webkit-animation: load 0.6s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation: popIn 0.8s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation-delay: 2s;
+    margin-left: 5px;
+    margin-top: -10px;
+    position: absolute;
+    bottom: 13px;
+    right: -12px;
+  
+  }
+  
+  
+  .role {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    margin-top: -10px;
+    justify-content: center;
+  }
+  
+  .role p {
+    animation: secFadeIn 1s forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+     font-weight: 400;
+    color: #ffffff;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+  
+  .regLink{
+  color: #ffffff;
+  text-decoration: none;
+  }
+  
+  .regLink:hover{
+    color: #888888;
+    text-decoration: none;
+  }
+
+  .inLog{
+    animation: mainFadeIn 1s forwards;
+    animation-delay: 2s;
+    opacity: 0;
+  }
+  .inP{
+    animation: mainFadeIn 1s forwards;
+    animation-delay: 2.5s;
+    opacity: 0;
+  }
+  @media only screen and (max-width: 768px)  {
+    .butLogin{
+      width: 47%;
+    }
+  }
+  
+  @media only screen and (max-width: 360px)  {
+    .imgLogin{
+      height: 75px;
+    }
+  
+    .title h1{
+      font-size: 2.3rem;
+    }
+  
+    .role p{
+      font-size: 10px;
+    }
+  
+    .passInput{
+      width: 290px;
+    }
+  
+    .passInput1{
+      width: 260px;
+    }
+  
+    .butLogin{
+      width: 96%;
+    }
+  
+    .inP p{
+      font-size: 14px;
+    }
+  }
+  
+  
+  
+  @keyframes mainBlock {
+    0% {
+        width: 0%;
+        left: 0;
+    }
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+  }
+  
+  @keyframes secBlock {
+    0% {
+      width: 0%;
+      left: 0;
+  
+    }
+    50% {
+      width: 100%;
+      left: 0;
+  
+    }
+    100% {
+      width: 0;
+      left: 100%;
+    }
+  }
+  
+  @keyframes mainFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  @keyframes secFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.5;
+    }
+  }
+  
+  @keyframes popIn {
+    0% {
+      width: 0px;
+      height: 0px;
+      background: #ad6a42;
+      border: 0px solid #ddd;
+      opacity: 0;
+    }
+    50% {
+      width: 10px;
+      height: 10px;
+      background: #ad6a42;
+      opacity: 1;
+      bottom: 45px;
+    }
+     65% {
+        width: 7px;
+      height: 7px;
+        bottom: 0px;
+        width: 15px
+     }
+     80% {
+        width: 10px;
+      height: 10px;
+        bottom: 20px
+     }
+    100% {
+      width: 7px;
+      height: 7px;
+      background: #ad6a42;
+      border: 0px solid #222;
+      bottom: 13px;
+  
+    }
+  }
+  
+
+.loader{
+    animation: rotate 3s linear infinite;
+	height: 50px;
+	transform-origin: bottom center;
+}
+
+@keyframes rotate {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.circle {
+	animation: grow 1.5s linear infinite;
+	background-color: rgb(84, 155, 212);
+	border-radius: 50%;
+	display: inline-block;
+	margin: -10px;
+	height: 40px;
+	width: 40px;
+	transform: scale(0);
+}
+
+.circle:nth-of-type(2) {
+	animation-delay: .75s;
+	background-color: rgb(14, 130, 184);
+}
+
+@keyframes grow {
+	50% {
+		transform: scale(1);
+	}
+}
