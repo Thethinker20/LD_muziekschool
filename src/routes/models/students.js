@@ -55,10 +55,6 @@ const studentSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  date: {
-    type: String,
-    required: true,
-  },
   telefoon: {
     type: String,
     required: true,
@@ -68,6 +64,10 @@ const studentSchema = new mongoose.Schema({
     required: true,
   },
   bereiken: {
+    type: String,
+    required: true,
+  },
+  traject: {
     type: String,
     required: true,
   },

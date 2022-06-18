@@ -145,11 +145,16 @@ async function registerUser(event) {
   const selsta = document.getElementById("state");
   const selci = document.getElementById("city");
   
+  const selvoorkennis = document.getElementById("voorkennis");
+  const selbereiken = document.getElementById("bereiken");
+  const seltraject = document.getElementById("traject");
+  const selnemen = document.getElementById("nemen");
+  
 
   event.preventDefault();
   const ikben = document.getElementById("ikben").value;
   const username = document.getElementById("username").value;
-  const password = document.getElementById("txtNewPassword").value;
+  const password = document.getElementById("password").value;
   const passwordC = document.getElementById("passwordC").value;
   const name = document.getElementById("name").value;
   const middlename = document.getElementById("middlename").value;
@@ -159,12 +164,14 @@ async function registerUser(event) {
   const state = selsta.options[selsta.selectedIndex].text;
   const city = selci.options[selci.selectedIndex].text;
 
+  const voorkennis = selvoorkennis.options[selvoorkennis.selectedIndex].text; 
+  const bereiken = selbereiken.options[selbereiken.selectedIndex].text;
+  const traject = seltraject.options[seltraject.selectedIndex].text;
+  const nemen = selnemen.options[selnemen.selectedIndex].text;
+
   const email = document.getElementById("email").value;
   const age = document.getElementById("age").value;
   const telefoon = document.getElementById("telefoon").value;
-  const voorkennis = document.getElementById("voorkennis").value;
-  const bereiken = document.getElementById("bereiken").value;
-  const nemen = document.getElementById("nemen").value;
 
   const result = await fetch("/registerForm", {
     method: "POST",
@@ -188,6 +195,7 @@ async function registerUser(event) {
       telefoon,
       voorkennis,
       bereiken,
+      traject,
       nemen
     }),
   }).then((res) => res.json());
@@ -197,9 +205,12 @@ async function registerUser(event) {
     //window.location.replace("/succesful");
     Swal.fire({
         icon: "success",
-        title: "successful",
+        title: "Gefeliciteerd, je account is succesvol aangemaakt",
       });
   } else {
-    alert(result.error);
+    Swal.fire({
+        icon: "error",
+        title: result.error,
+      });
   }
 }

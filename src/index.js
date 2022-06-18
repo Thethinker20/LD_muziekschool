@@ -132,14 +132,9 @@ app.post("/registerForm", async (req, res) => {
       telefoon,
       voorkennis,
       bereiken,
+      traject,
       nemen
   } = req.body;
-
-
-  const student_user = await Student.findOne({username}).lean();
-  if (student_user == username) {
-    return res.json({ status: "error", error: "Username already exist!"});
-  }
 
   const password = await bcrypt.hash(plainTextPassword, 10);
   const passwordC = await bcrypt.hash(plainTextPasswordC, 10);
@@ -162,6 +157,7 @@ app.post("/registerForm", async (req, res) => {
       telefoon,
       voorkennis,
       bereiken,
+      traject,
       nemen,
     });
     console.log("user create good: ", response);
@@ -200,7 +196,7 @@ app.post("/registerForm", async (req, res) => {
   } catch (error) {
     if (error.code === 11000) {
       // duplicate key
-      return res.json({ status: "error", error: "Username already in use" });
+      return res.json({ status: "402", error: "Username already in use" });
     }
     throw error;
   }
