@@ -17,18 +17,18 @@
     <header>
         <div class="container">
             <a href="/"><img src="/media/logo_bg.png" alt=""></a>
+            {{!-- <h5>Leo Davelaar Muziekschool</h5> --}}
         </div>
     </header>
     <section>
         <div class="container">
             <div class="register-header">
-                <h3>Registro adventschool bestuur</h3>
-                <p>Registra bo yu riba nos sistema, yenando tur e vak nan ku tin. No lubida di check si tur informashon
-                    ta bon yena.</p>
+                <h3>NED Christelijke Muziek Instituut</h3>
+                <p>Inschrijving - voor piano lessen in Nedercountry</p>
             </div>
             <form action="">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-12 d-flex justify-content-center align-items-center flex-column">
                         <div class="avatar-upload">
                             <div class="avatar-edit">
                                 <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
@@ -39,233 +39,166 @@
                                 </div>
                             </div>
                         </div>
-                        <h5 class="avatar-text">Uplaod un potrèt di e studiante</h5>
-                    </div>
-                    <div class="col-lg-8">
+                        <h5 class="avatar-text text-center">Upload een afbeelding van jou</h5>
                     </div>
                 </div>
+                <div class="row mt-4 d-flex justify-content-center align-items-center flex-column">
+                    <h3 class="stud-text mb-25">Login gegevens</h3>
+                </div>
                 <div class="row mb-25">
-                    <h3 class="stud-text">Informashon personal: Studiante</h3>
-                    <h6 class="mb-25">Bo username mester kuminsa ku nomber di bo skol por ehempel: si bo yu ta di
-                        advenschool bonam e username mester kuminsa ku boMartina of korCornelia, maJones.</h6>
-                    <h5 class="mb-25">Adventschool Bonam: "bo", Koralspecht: "kor", Mahuma-zuid: "ma"</h5>
                     <div class="col-lg-3">
-                        <label>Skol</label>
-                        <select name="" id="" class="reg-input">
-                            <option value="" disabled selected>Select skol</option>
-                            <option value="Bonam">Bonam</option>
-                            <option value="Koralspecht">Koralspecht</option>
-                            <option value="Mahuma-zuid">Mahuma-zuid</option>
+                        <label>Ik ben</label>
+                        <select name="ikben" id="ikben" class="reg-input" required>
+                            <option value="" disabled selected>Ik ben</option>
+                            <option value="Een ouder of voogd">Een ouder of voogd</option>
+                            <option value="Een student">Een student</option>
+                            <option value="Een volwassen">Een volwassen</option>
                         </select>
                     </div>
                     <div class="col-lg-3">
-                        <label>Username</label>
-                        <input type="text" class="reg-input" placeholder="Username" name="username" id="username">
+                        <label>Gebruikersnaam</label>
+                        <input type="text" class="reg-input" placeholder="Username" name="username" id="username"
+                            disabled>
                     </div>
                     <div class="col-lg-3">
-                        <label>Password</label>
+                        <label>Wachtwoord</label>
                         <input type="password" class="reg-input" placeholder="Password" id="password" name="password">
+                        <div class="registrationFormAlert" id="CheckPasswordMatch1"></div>
                     </div>
                     <div class="col-lg-3">
-                        <label>Confirm password</label>
+                        <label>Bevestig Wachtwoord</label>
                         <input type="password" class="reg-input" placeholder="Confirm password" id="passwordC"
                             name="passwordC">
+                        <div class="registrationFormAlert" id="CheckPasswordMatch"></div>
                     </div>
                 </div>
                 <div class="row mb-25">
                     <div class="col-lg-3">
-                        <label>Nòmber</label>
-                        <input type="text" class="reg-input" placeholder="Nòmber" name="name" id="name">
+                        <label>Naam student</label>
+                        <input type="text" class="reg-input" placeholder="Naam student" id="name" name="name" required>
+                        <p class="stud_p" id="stud_p">Ben je een Ouder of Voogd, vul de naam van de minderjarige in.</p>
                     </div>
                     <div class="col-lg-3">
-                        <label>Fam</label>
-                        <input type="text" class="reg-input" placeholder="Fam" id="fam" name="fam">
+                        <label>Voornaam</label>
+                        <input type="text" class="reg-input" placeholder="Voornaam" id="middlename" name="middlename">
                     </div>
                     <div class="col-lg-3">
-                        <label>Fecha nasimentu</label>
-                        <input type="date" class="reg-input" placeholder="Fecha nasimentu" id="bornDate"
-                            name="bornDate">
+                        <label>Achternaam</label>
+                        <input type="text" class="reg-input" placeholder="Achternaam" id="lastname" name="lastname"
+                            required>
                     </div>
                     <div class="col-lg-3">
-                        <label>Sexo</label>
-                        <select name="sexo" id="sexo" class="reg-input">
-                            <option value="" disabled selected>Sexo</option>
-                            <option value="0">Homber</option>
-                            <option value="1">Muhe</option>
+                        <label>Geboortedatum</label>
+                        <input type="text" class="reg-input" placeholder="e.g 12/05/1998" id="age" name="age" required>
+                    </div>
+                </div>
+                <div class="row mb-25">
+                    <div class="col-lg-3">
+                        <label>Address</label>
+                        <input type="password" class="reg-input" placeholder="Address" id="address" name="address">
+                    </div>
+                    <div class="col-lg-3">
+                        <label>Land</label>
+                        <select name="country" id="country" class="reg-input" required>
+                            <option value="" disabled selected>Selecteer je land</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3">
+                        <label>Staat</label>
+                        <select name="state" id="state" class="reg-input">
+                            <option value="" disabled selected>Selecteer je staat</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3">
+                        <label>Stad</label>
+                        <select name="city" id="city" class="reg-input">
+                            <option value="" disabled selected>Selecteer je stad</option>
                         </select>
                     </div>
                 </div>
                 <div class="row mb-25">
                     <div class="col-lg-3">
-                        <label>Nashonalidad</label>
-                        <input type="text" class="reg-input" placeholder="Nashonalidad" name="nashonalidad"
-                            id="nashonalidad">
+                        <label>Telefoon</label>
+                        <input type="text" class="reg-input" placeholder="Telefoon" name="telefoon" id="telefoon"
+                            required>
                     </div>
                     <div class="col-lg-3">
-                        <label>Religion</label>
-                        <input type="text" class="reg-input" placeholder="Religion" id="religion" name="religion">
+                        <label>Email</label>
+                        <input type="text" class="reg-input" placeholder="Email" id="email" name="email">
                     </div>
+                </div>
+                <div class="row mb-25 mt-5">
+                    <div class="col-lg-12">
+                        <h3>Extra vragen</h3>
+                    </div>
+                </div>
+                <div class="row mb-25">
                     <div class="col-lg-3">
-                        <label>Tipo di sanger</label>
-                        <select name="bloodT" id="bloodT" class="reg-input">
-                            <option value="" disabled selected>Tipo di sanger</option>
-                            <option>A+</option>
-                            <option>A-</option>
-                            <option>B+</option>
-                            <option>B-</option>
-                            <option>O+</option>
-                            <option>O-</option>
-                            <option>AB+</option>
-                            <option>AB-</option>
+                        <label>Wat is je voorkennis</label>
+                        <select name="voorkennis" id="voorkennis" class="reg-input" required>
+                            <option value="" disabled selected>Wat is je voorkennis</option>
+                            <option value="">Ik ben een beginner</option>
+                            <option value="">Ik weet een beetje van piano spelen</option>
+                            <option value="">Ik heb eerder pianolessen gevolgd</option>
+                            <option value="">Ik kan noten lezen</option>
+                            <option value="">Ik kan akkorden spelen</option>
+                            <option value="">Ik ka al spelen maar will verder ontwikkelen</option>
+                            <option value="">Andere instrumenten, ik will piano beheersen</option>
                         </select>
                     </div>
                     <div class="col-lg-3">
-                        <label>Adrès</label>
-                        <input type="text" class="reg-input" placeholder="Adrès" id="adres" name="adres">
+                        <label>Wat wil je bereiken</label>
+                        <select name="bereiken" id="bereiken" class="reg-input" required>
+                            <option value="" disabled selected>Wat wil je bereiken</option>
+                            <option value="">Muziek begrijpen en spelen</option>
+                            <option value="">Mezelf kunnen begelieden</option>
+                            <option value="">In de kerk spelen</option>
+                            <option value="">In een band/groep spelen</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3">
+                        <label>Welke Les traject wilt u volgen</label>
+                        <select name="bereiken" id="bereiken" class="reg-input" required>
+                            <option value="" disabled selected>Welke Les traject wilt u volgen</option>
+                            <option value="">Beginner (kind tot 18)</option>
+                            <option value="">Beginner 18+</option>
+                            <option value="">Piano voor zangers</option>
+                            <option value="">Gevorderde (kind tot 18)</option>
+                            <option value="">Gevorderde 18+</option>
+                            <option value="">Hymnal skool</option>
+                            <option value="">Praise and Workship skool</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3">
+                        <label>Hoe wil ik les nemen?</label>
+                        <select name="bereiken" id="bereiken" class="reg-input" required>
+                            <option value="" disabled selected>Hoe wil ik les nemen?</option>
+                            <option value="">Online</option>
+                            <option value="">Live</option>
+                        </select>
                     </div>
                 </div>
-                <div class="row mb-25">
-                    <h3 class="stud-text">Informashon personal: Famia</h3>
-                </div>
-                <div class="row mb-25">
-                    <div class="col-lg-3">
-                        <label>Nòmber di mama</label>
-                        <input type="text" class="reg-input" placeholder="Nòmber di mama" name="nameM" id="nameM">
-                    </div>
-                    <div class="col-lg-3">
-                        <label>Fam di mama</label>
-                        <input type="text" class="reg-input" placeholder="Fam di mama" id="famM" name="famM">
-                    </div>
-                    <div class="col-lg-3">
-                        <label>Fecha nasimentu</label>
-                        <input type="date" class="reg-input" placeholder="Fecha nasimentu" id="bornDateM"
-                            name="bornDateM">
-                    </div>
-                    <div class="col-lg-3">
-                        <label>Nashonalidad</label>
-                        <input type="text" class="reg-input" placeholder="Nashonalidad" name="nashonalidadM"
-                            id="nashonalidadM">
+                <div class="row mb-25 mt-5">
+                    <div class="form-check ml-3">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" required>
+                        <label class="form-check-label" for="defaultCheck1">
+                            Ik ga akkoord met deze <a href="">algemene voorwaarden</a>.
+                        </label>
                     </div>
                 </div>
-                <div class="row mb-25">
-                    <div class="col-lg-3">
-                        <label>Okupashon</label>
-                        <input type="text" class="reg-input" placeholder="Okupashon" name="okupashon" id="okupashon">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <button type="submit" class="reg-sendButton">Versturen</button>
                     </div>
-                    <div class="col-lg-3">
-                        <label>Adres</label>
-                        <input type="text" class="reg-input" placeholder="Adres" id="AdresM" name="AdresM">
-                    </div>
-                </div>
-                <div class="row mb-25">
-                    <div class="col-lg-3">
-                        <label>Telefòn di kas</label>
-                        <input type="text" class="reg-input" placeholder="Number di kas" id="telMKas" name="telMKas">
-                    </div>
-                    <div class="col-lg-3">
-                        <label>Number di Selular</label>
-                        <input type="text" class="reg-input" placeholder="Telefòn di Selular" id="telMSelular"
-                            name="telMSelular">
-                    </div>
-                    <div class="col-lg-3">
-                        <label>Telefòn di Trabou</label>
-                        <input type="text" class="reg-input" placeholder="Telefòn di Trabou" id="telMtrabou"
-                            name="telMtrabou">
-                    </div>
-                </div>
-                <hr>
-                <div class="row mb-25">
-                    <div class="col-lg-3">
-                        <label>Nòmber di tata</label>
-                        <input type="text" class="reg-input" placeholder="Nòmber di tata" name="nameT" id="nameT">
-                    </div>
-                    <div class="col-lg-3">
-                        <label>Fam di tata</label>
-                        <input type="text" class="reg-input" placeholder="Fam di tata" id="famT" name="famT">
-                    </div>
-                    <div class="col-lg-3">
-                        <label>Fecha nasimentu</label>
-                        <input type="date" class="reg-input" placeholder="Fecha nasimentu" id="bornDateT"
-                            name="bornDateT">
-                    </div>
-                    <div class="col-lg-3">
-                        <label>Nashonalidad</label>
-                        <input type="text" class="reg-input" placeholder="Nashonalidad" name="nashonalidadT"
-                            id="nashonalidadT">
-                    </div>
-                </div>
-                <div class="row mb-25">
-                    <div class="col-lg-3">
-                        <label>Okupashon</label>
-                        <input type="text" class="reg-input" placeholder="Okupashon" name="okupashoT" id="okupashoT">
-                    </div>
-                    <div class="col-lg-3">
-                        <label>Adres</label>
-                        <input type="text" class="reg-input" placeholder="Adres" id="AdresT" name="AdresT">
-                    </div>
-                </div>
-                <div class="row mb-25">
-                    <div class="col-lg-3">
-                        <label>Telefòn di kas</label>
-                        <input type="text" class="reg-input" placeholder="Number di kas" id="telTKas" name="telTKas">
-                    </div>
-                    <div class="col-lg-3">
-                        <label>Number di Selular</label>
-                        <input type="text" class="reg-input" placeholder="Telefòn di Selular" id="telTSelular"
-                            name="telTSelular">
-                    </div>
-                    <div class="col-lg-3">
-                        <label>Telefòn di Trabou</label>
-                        <input type="text" class="reg-input" placeholder="Telefòn di Trabou" id="telTtrabou"
-                            name="telTtrabou">
-                    </div>
-                </div>
-
-                <hr>
-                <div class="row mb-25">
-                    <h3 class="stud-text">Otro kontakto</h3>
-                </div>
-                <div class="row mb-25">
-                    <div class="col-lg-3">
-                        <label>Nòmber</label>
-                        <input type="text" class="reg-input" placeholder="Nòmber" id="nameO" name="nameO">
-                    </div>
-                    <div class="col-lg-3">
-                        <label>Fam</label>
-                        <input type="text" class="reg-input" placeholder="Fam" id="famO" name="famO">
-                    </div>
-                    <div class="col-lg-3">
-                        <label>Familiar</label>
-                        <input type="text" class="reg-input" placeholder="E.g. Oma, tanchi, tio" id="familiar"
-                            name="familiar">
-                    </div>
-                </div>
-                <div class="row mb-25">
-                    <div class="col-lg-3">
-                        <label>Adrès</label>
-                        <input type="text" class="reg-input" placeholder="Adrès" id="adresO" name="adresO">
-                    </div>
-                    <div class="col-lg-3">
-                        <label>Number di Selular</label>
-                        <input type="text" class="reg-input" placeholder="Telefòn di Selular" id="telTSelularO"
-                            name="telTSelularO">
-                    </div>
-                    <div class="col-lg-3">
-                        <label>Telefòn di Kas</label>
-                        <input type="text" class="reg-input" placeholder="Telefòn di Kas" id="telOkas" name="telOKas">
-                    </div>
-                </div>
-                <div class="row mb-25">
-                    <h6>Verifica si tur e hòki nana ta yena ku informashon korekto, si tur onformashon ta bon klik riba
-                        e boton "Manda" pa manda e registro.</h6>
-                </div>
-                <div class="row bRow">
-                    <button type="submit" class="reg-sendButton">Manda</button>
                 </div>
             </form>
         </div>
     </section>
-
+    <section class="footer">
+        <div class="lowerbar">
+            <p>ld_muziekschool</p>
+        </div>
+    </section>
 </body>
 <script src="/vendor/jquery/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js"></script>

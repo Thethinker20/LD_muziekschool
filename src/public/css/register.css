@@ -182,7 +182,8 @@ a img{
 
 .register-header{
     height: 150px;
-    padding-top: 20px;
+    padding-top: 50px;
+    text-align: center;
 }
 
 .avatar-upload {
@@ -246,6 +247,7 @@ a img{
 
 .avatar-text{
     padding-top: 10px;
+    font-size: 12px;
 }
 
 .reg-input{
@@ -266,6 +268,14 @@ a img{
     padding-bottom: 10px;
 }
 
+.stud_p{
+    font-size: 11px;
+    color: rgb(137, 29, 29);
+    margin-top: 5px;
+    opacity: 0;
+    display: none;
+}
+
 .mb-25{
 margin-bottom: 25px;
 }
@@ -279,11 +289,11 @@ label{
 }
 
 .reg-sendButton{
-    padding: 10px 20px;
+    padding: 10px 50px;
     margin-bottom: 40px;
     margin-top: 13px;
     border: none;
-    background: #851313;
+    background: #002147;
     color: white;
     border-radius: 8px;
     float: right;
@@ -296,4 +306,23 @@ label{
 	100% {
 		opacity: 1;
 	}
+}
+
+.footer{
+    height: 20vh;
+display: flex;
+align-items: flex-end;
+}
+
+.lowerbar{
+    width: 100%;
+    height: 30px;
+    background: #145bab;
+    color: white;
+}
+
+.lowerbar p{
+    font-size: 12px;
+    padding: 5px;
+    text-align: right;
 }
