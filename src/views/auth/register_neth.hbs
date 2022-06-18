@@ -26,7 +26,7 @@
                 <h3>NED Christelijke Muziek Instituut</h3>
                 <p>Inschrijving - voor piano lessen in Nedercountry</p>
             </div>
-            <form action="">
+            <form action="post" id="ld_reg_form">
                 <div class="row">
                     <div class="col-lg-12 d-flex justify-content-center align-items-center flex-column">
                         <div class="avatar-upload">
@@ -171,7 +171,7 @@
                     </div>
                     <div class="col-lg-3">
                         <label>Hoe wil ik les nemen?</label>
-                        <select name="bereiken" id="bereiken" class="reg-input" required>
+                        <select name="nemen" id="nemen" class="reg-input" required>
                             <option value="" disabled selected>Hoe wil ik les nemen?</option>
                             <option value="">Online</option>
                             <option value="">Live</option>
@@ -180,9 +180,9 @@
                 </div>
                 <div class="row mb-25 mt-5">
                     <div class="form-check ml-3">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" required>
-                        <label class="form-check-label" for="defaultCheck1">
-                            Ik ga akkoord met deze <a href="">algemene voorwaarden</a>.
+                        <input class="form-check-input" type="checkbox" value="" required>
+                        <label class="form-check-label">
+                            Ik ga akkoord met deze <a href="" download="/document/term_condition.pdf">algemene voorwaarden</a>.
                         </label>
                     </div>
                 </div>
@@ -196,7 +196,7 @@
     </section>
     <section class="footer">
         <div class="lowerbar">
-            <p>ld_muziekschool</p>
+            <p>©ld_muziekschool</p>
         </div>
     </section>
 </body>

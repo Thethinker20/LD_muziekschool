@@ -131,3 +131,75 @@ $.ajax({
         alert("server error", err);
     },
 });
+
+const form = document.getElementById("ld_reg_form");
+form.addEventListener("submit", registerUser);
+
+var county1;
+var city1;
+var state1;
+
+async function registerUser(event) {
+  
+  const selcou = document.getElementById("country");
+  const selsta = document.getElementById("state");
+  const selci = document.getElementById("city");
+  
+
+  event.preventDefault();
+  const ikben = document.getElementById("ikben").value;
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("txtNewPassword").value;
+  const passwordC = document.getElementById("passwordC").value;
+  const name = document.getElementById("name").value;
+  const middlename = document.getElementById("middlename").value;
+  const lastname = document.getElementById("lastname").value;
+  const address = document.getElementById("address").value;
+  const country = selcou.options[selcou.selectedIndex].text; 
+  const state = selsta.options[selsta.selectedIndex].text;
+  const city = selci.options[selci.selectedIndex].text;
+
+  const email = document.getElementById("email").value;
+  const age = document.getElementById("age").value;
+  const telefoon = document.getElementById("telefoon").value;
+  const voorkennis = document.getElementById("voorkennis").value;
+  const bereiken = document.getElementById("bereiken").value;
+  const nemen = document.getElementById("nemen").value;
+
+  const result = await fetch("/registerForm", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+        ikben,
+      username,
+      password,
+      passwordC,
+      name,
+      middlename,
+      lastname,
+      address,
+      country,
+      state,
+      city,
+      email,
+      age,
+      telefoon,
+      voorkennis,
+      bereiken,
+      nemen
+    }),
+  }).then((res) => res.json());
+
+  if (result.status === "ok") {
+    // everythign went fine
+    //window.location.replace("/succesful");
+    Swal.fire({
+        icon: "success",
+        title: "successful",
+      });
+  } else {
+    alert(result.error);
+  }
+}
