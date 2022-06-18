@@ -28,8 +28,8 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  /* display: none;
-  opacity: 0; */
+  display: none;
+  opacity: 0;
   transition: opacity 1s ease-in;
 }
 
@@ -48,6 +48,7 @@ form {
       background: #0000004b;
       width: 400px;
       height: 450px;
+      animation: fadeIn 1s ease-in;
   }
   
   span {

@@ -1,5 +1,26 @@
 const path = require("path");
-const merge = require("lodash/merge");
+const merge = require("lodash.merge");
+
+/* istanbul ignore next */
+const requireProcessEnv = name => {
+  if (!process.env[name]) {
+    throw new Error("You must set the " + name + " environment variable");
+  }
+  return process.env[name];
+};
+
+/* istanbul ignore next */
+if (process.env.NODE_ENV !== "production") {
+  const dotenv = require("dotenv-safe");
+  // >>> Here is where the environment
+  // variables are loaded.
+  //
+  // A) Uncomment this lines:
+  dotenv.config({
+    path: path.join(__dirname, "../.env"),
+    example: path.join(__dirname, "../.env.example")
+  });
+}
 
 const config = {
     all: {
