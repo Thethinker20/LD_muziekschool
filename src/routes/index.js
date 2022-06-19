@@ -19,9 +19,11 @@ router.get("/language_reg", (req, res) => {
     res.render("auth/register_neth", { layout: false });
   });
 
+//admin portal
+  router.get("/portal_admin", (req, res) => {
+    res.render("pages/admin/admin_home_p", { layout: false });
+  });
 
-// router.get("/succesful", (req, res) => {
-//     res.render("pages/succesful", { layout: false });
-//   });
+
 
 module.exports = router;

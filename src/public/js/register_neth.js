@@ -30,10 +30,13 @@ $("#ikben").change(function () {
     }
 });
 
-$("#name").change(function () {
-    var name = $('#name');
+$("#lastname").change(function () {
+    var name_u = $('#name').val();
+    console.log(name_u);
+    var lastname_u = $('#lastname').val();
+    console.log(lastname_u);
     var username = $('#username');
-    username.val("stud" + name.val());
+    username.val("stud" + name_u.substring(0, 4).toLowerCase() + lastname_u.substring(lastname_u.length-4).toLowerCase() + "326");
 });
 
 $("#password").change(function () {
@@ -50,7 +53,8 @@ $("#password").change(function () {
     }
 });
 
-//Confirma contraseña
+//Confirm password
+
 $("#passwordC").change(function () {
     var password = $("#password").val();
     var confirmPassword = $("#passwordC").val();
@@ -132,7 +136,8 @@ $.ajax({
     },
 });
 
-const form = document.getElementById("ld_reg_form");
+//netherlans form 
+const form = document.getElementById("ld_reg_form_neth");
 form.addEventListener("submit", registerUser);
 
 var county1;
@@ -152,6 +157,8 @@ async function registerUser(event) {
   
 
   event.preventDefault();
+
+  const lang = "ned";
   const ikben = document.getElementById("ikben").value;
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
@@ -173,12 +180,13 @@ async function registerUser(event) {
   const age = document.getElementById("age").value;
   const telefoon = document.getElementById("telefoon").value;
 
-  const result = await fetch("/registerForm", {
+  const result = await fetch("/register_neth", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
+        lang,
         ikben,
       username,
       password,

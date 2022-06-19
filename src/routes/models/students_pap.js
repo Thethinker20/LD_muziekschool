@@ -2,12 +2,16 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 // User's Atributes
-const studentSchema = new mongoose.Schema({
-  ikben: {
+const studentPSchema = new mongoose.Schema({
+  lang: {
     type: String,
     required: true,
   },
-  username: {
+  ken: {
+    type: String,
+    required: true,
+  },
+  username_pap: {
     type: String,
     required: true,
     unique: true,
@@ -20,58 +24,58 @@ const studentSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  name: {
+  name_pap: {
     type: String,
     required: true,
   },
-  middlename: {
+  middlename_pap: {
     type: String,
   },
-  lastname: {
-    type: String,
-    required: true,
-  },
-  address: {
+  lastname_pap: {
     type: String,
     required: true,
   },
-  country: {
+  address_pap: {
     type: String,
     required: true,
   },
-  state: {
+  bario: {
+    type: String,
+    required: true,
+  },
+  pastor: {
     type: String,
     required: false,
   },
-  city: {
+  konosementu: {
     type: String,
     required: false,
   },
-  email: {
+  meta: {
     type: String,
     required: true,
   },
-  age: {
+  trajekto: {
     type: String,
     required: true,
   },
-  telefoon: {
+  iglesia: {
     type: String,
     required: true,
   },
-  voorkennis: {
+  email_pap: {
     type: String,
     required: true,
   },
-  bereiken: {
+  age_pap: {
     type: String,
     required: true,
   },
-  traject: {
+  telefoon_pap: {
     type: String,
     required: true,
   },
-  nemen: {
+  telefoon_emer: {
     type: String,
     required: true,
   },
@@ -82,5 +86,5 @@ const studentSchema = new mongoose.Schema({
 }
 );
 
-const Admin = mongoose.model("Student", studentSchema);
-module.exports = Admin;
+const student_pap = mongoose.model("Student_pap", studentPSchema);
+module.exports = student_pap;

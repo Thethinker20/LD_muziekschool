@@ -1,0 +1,100 @@
+{
+    "iglesia":[
+        {
+            "id": 1,
+            "name" : "Barbouquet"
+        },
+        {
+            "id": 2,
+            "name" : "Bonam"
+        },
+        {
+            "id": 3,
+            "name" : "Buena Vista"
+        },
+        {
+            "id": 4,
+            "name" : "Cher Asile"
+        },
+        {
+            "id": 5,
+            "name" : "Dominguitu"
+        },
+        {
+            "id": 6,
+            "name" : "Ebenezer"
+        },
+        {
+            "id": 7,
+            "name" : "Emmastad"
+        },
+        {
+            "id": 8,
+            "name" : "Fuik"
+        },
+        {
+            "id": 9,
+            "name" : "Hispano"
+        },
+        {
+            "id": 10,
+            "name" : "Jandoret"
+        },
+        {
+            "id": 11,
+            "name" : "Janluis"
+        },
+        {
+            "id": 12,
+            "name" : "Maranatha"
+        },
+        {
+            "id": 13,
+            "name" : "Montaña"
+        },
+        {
+            "id": 14,
+            "name" : "Muizenberg"
+        },
+        {
+            "id": 15,
+            "name" : "Mundu Nobo"
+        },
+        {
+            "id": 16,
+            "name" : "Phlip"
+        },
+        {
+            "id": 17,
+            "name" : "Ora di poder"
+        },
+        {
+            "id": 18,
+            "name" : "Santa Rosa"
+        },
+        {
+            "id": 19,
+            "name" : "Ser'i Kandela"
+        },
+        {
+            "id": 20,
+            "name" : "Stenenkoraal"
+        },
+        {
+            "id": 21,
+            "name" : "Souax"
+        },
+        {
+            "id": 22,
+            "name" : "Tera kòrá"
+        },
+        {
+            "id": 23,
+            "name" : "Tra'i Seru"
+        },
+        {
+            "id": 24,
+            "name" : "Veeris"
+        }
+    ]
+}
