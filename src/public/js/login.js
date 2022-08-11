@@ -47,7 +47,7 @@ async function login(event) {
     }).then((res) => res.json());
     if (result.status === "ok") {
       window.location.replace("/portal_admin");
-    }else {
+    } else {
       Swal.fire({
         icon: "error",
         title: result.error,
@@ -66,19 +66,24 @@ async function login(event) {
     }).then((res) => res.json());
     if (result.status === "ok") {
       const resu = result.data;
-      if (result.lang == "pap") {
-        localStorage.setItem("token_pap", resu.data);
-        window.location.replace("/portal_pap");
-      } else if (result.lang == "neth") {
-        localStorage.setItem("token_neth", resu.data);
-        window.location.replace("/portal_neth");
-      } else {
+      const paid = result.paid;
+      console.log(paid)
+      if(paid == "true"){
+        if (result.lang == "pap") {
+          sessionStorage.setItem("token_pap", JSON.stringify(resu));
+          window.location.replace("/student_home_pap");
+          getStudentInfo();
+        } else if (result.lang == "neth") {
+          sessionStorage.setItem("token_neth", JSON.stringify(resu));
+          window.location.replace("/student_home_neth");
+        }
+      }else {
         Swal.fire({
-          icon: "error",
-          title: result.error,
+          icon: 'warning',
+          title: "Please do payment, contact administrator for more information!",
         });
       }
-    }else(
+    } else (
       Swal.fire({
         icon: "error",
         title: result.error,

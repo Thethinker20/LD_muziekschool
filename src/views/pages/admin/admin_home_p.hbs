@@ -10,17 +10,52 @@
     <link rel='stylesheet' type='text/css' media='screen' href='/css/portal/admin.css'>
 </head>
 <body>
-    <div class="d-flex" id="wrapper">
+    <div class="main" >
+        <div class="d-flex" id="wrapper">
+
         <!-- Sidebar -->
         <div class="bg-white" id="sidebar-wrapper">
             <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">LDavelaar</div>
             <div class="list-group list-group-flush my-3">
-                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                <a href="/portal_admin" class="list-group-item list-group-item-action bg-transparent second-text active"><i
                         class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
-                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
-                        class="fas fa-project-diagram me-2"></i>Students</a>
-                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
-                        class="fas fa-chart-line me-2"></i>Classes</a>
+               
+                <!-- NL Submenu content -->
+                <a href="#submenu1" data-toggle="collapse" aria-expanded="false"
+                    class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <i class="fas fa-graduation-cap me-2"></i>
+                        <span class="menu-collapsed">Students NL</span>
+                        <span class="submenu-icon ml-auto"></span>
+                    </div>
+                </a>
+                <div id='submenu1' class="collapse sidebar-submenu">
+                    <a href="/admin_student_neth" class="list-group-item list-group-item-action fw-bold">
+                        <span class="menu-collapsed">All Students</span>
+                    </a>
+                    <a href="/admin_nl_edit" class="list-group-item list-group-item-action fw-bold">
+                        <span class="menu-collapsed">Edit Students</span>
+                    </a>
+                </div>
+                <!-- Cur Submenu content -->
+                <a href="#submenu2" data-toggle="collapse" aria-expanded="false"
+                    class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <i class="fas fa-graduation-cap me-2"></i>
+                        <span class="menu-collapsed">Students Cur</span>
+                        <span class="submenu-icon ml-auto"></span>
+                    </div>
+                </a>
+                <div id='submenu2' class="collapse sidebar-submenu">
+                    <a href="/admin_student_cur" class="list-group-item list-group-item-action fw-bold">
+                        <span class="menu-collapsed">All Students</span>
+                    </a>
+                    <a href="/admin_cur_edit" class="list-group-item list-group-item-action fw-bold">
+                        <span class="menu-collapsed">Edit Students</span>
+                    </a>
+                </div>
+                <a href="/admin_classes" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                        class="fas fa-landmark me-2"></i>Classes</a>
                 <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                         class="fas fa-paperclip me-2"></i>Material</a>
             </div>
@@ -51,7 +86,7 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#">Profile</a></li>
                                 <li><a class="dropdown-item" href="#">Settings</a></li>
-                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                                <li><a class="dropdown-item" href="/login">Logout</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -68,7 +103,7 @@
                     <div class="col-md-3">
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
-                                <h3 class="fs-2" id="classes">4920</h3>
+                                <h3 class="fs-2" id="classes">5</h3>
                                 <p class="fs-5">Classes</p>
                             </div>
                             <i
@@ -110,10 +145,18 @@
         </div>
     </div>
     <!-- /#page-content-wrapper -->
+        </div>
+    </div>
+    <div class="body1">
+    <div class="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
     </div>
 </body>
 <script src="/vendor/jquery/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
     <script src='/js/portal/admin.js'></script>
 </html>

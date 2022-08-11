@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Student Cur</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/portal/portal_student.css'>
+    <link rel='stylesheet' href='https://cdn.plyr.io/3.6.2/plyr.css'>
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="d-flex" id="wrapper">
+
+            <!-- Sidebar -->
+            <div class="side_bar_wrap" id="sidebar-wrapper">
+                <div class="sidebar-heading text-right primary-text fs-1 fw-bold text-uppercase">LD</div>
+                <div class="list-group list-group-flush my-3">
+                    <a href="/student_home_pap"
+                        class="list-group-item list-group-item-action bg-transparent second-text ">
+                        Dashboard<i class="fa fa-tachometer-alt icon_s"></i>
+                    </a>
+
+                    <a href="/student_audip_pap"
+                        class="list-group-item list-group-item-action bg-transparent second-text active" title="Audio">
+                        Mi Audio<i class="fas fa-headphones-alt  icon_s"></i>
+                    </a>
+
+                    <a href="/student_home_pap"
+                        class="list-group-item list-group-item-action bg-transparent second-text ">
+                        Mi Sheet<i class="fas fa-music icon_s"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- /#sidebar-wrapper -->
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+
+                <nav class="navbar navbar-expand-lg navbar-light bg-transparent px-4">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+                    </div>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-user me-2"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    {{!-- <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Settings</a></li> --}}
+                                    <li><a class="dropdown-item" href="/login">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="container-fluid px-4 youtu">
+
+                    <div class="my-5">
+                        <h3 class="fs-1 mb-3">Lès Audio</h3>
+                        <p id="i_stud_level"></p>
+                    </div>
+
+                    <div class="row g-3 my-2 audio_box">
+                        <div id="mainwrap">
+                            <div id="nowPlay">
+                                <span id="npAction">Paused...</span><span id="npTitle"></span>
+                            </div>
+                            <div id="audiowrap">
+                                <div id="audio0">
+                                    <audio id="audio1" preload controls>Your browser does not support HTML5 Audio!
+                                        😢</audio>
+                                </div>
+                                <div id="tracks">
+                                    <a id="btnPrev">&larr;</a><a id="btnNext">&rarr;</a>
+                                </div>
+                            </div>
+                            <div id="plwrap">
+                                <ul id="plList"></ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    </div>
+</body>
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.8/plyr.min.js"></script>
+<script type="module" src='/js/student_portal/student_audio.js'></script>
+
+</html>

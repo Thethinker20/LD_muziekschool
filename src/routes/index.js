@@ -23,7 +23,34 @@ router.get("/language_reg", (req, res) => {
   router.get("/portal_admin", (req, res) => {
     res.render("pages/admin/admin_home_p", { layout: false });
   });
-
-
+  router.get("/admin_student_neth", (req, res) => {
+    res.render("pages/admin/admin_student_neth", { layout: false });
+  });
+  router.get("/admin_student_cur", (req, res) => {
+    res.render("pages/admin/admin_student_cur", { layout: false });
+  });
+  router.get("/admin_nl_edit", (req, res) => {
+    res.render("pages/admin/admin_nl_edit", { layout: false });
+  });
+  router.get("/admin_cur_edit", (req, res) => {
+    res.render("pages/admin/admin_cur_edit", { layout: false });
+  });
+  router.get("/admin_classes", (req, res) => {
+    res.render("pages/admin/admin_classes", { layout: false });
+  });
+  
+  //student portal
+  router.get("/student_home_pap", (req, res) => {
+    res.render("pages/student/student_home_pap", { layout: false });
+  });
+  router.get("/student_audip_pap", (req, res) => {
+    res.render("pages/student/student_audio_pap", { layout: false });
+  });
+  router.get("/student_home_neth", (req, res) => {
+    res.render("pages/student/student_home_neth", { layout: false });
+  });
+  router.get("/student_audio_neth", (req, res) => {
+    res.render("pages/student/student_audio_neth", { layout: false });
+  });
 
 module.exports = router;

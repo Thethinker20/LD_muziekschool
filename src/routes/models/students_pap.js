@@ -79,6 +79,16 @@ const studentPSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  level: {
+    type: String,
+    required: false,
+    default: "Accord Method 1"
+  },
+  paid: {
+    type: String,
+    required: false,
+    default: false,
+  },
   createdAt: {
     type: Date,
     default: Date.now,
