@@ -2,8 +2,10 @@ const mongoose = require("mongoose");
 
 const {mongo} = require("./config");
 
+const uri = process.env.MONGODB_URI
+
 mongoose
-.connect(mongo.uri, {
+.connect(uri, {
     useCreateIndex: true,
     useNewUrlParser: true,
     useFindAndModify: false,
