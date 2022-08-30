@@ -410,7 +410,7 @@ svg:not(:root) {
 
 #modal-container .modal-background .modal_pre {
     background: white;
-    padding: 50px;
+    padding: 0px 50px 50px 50px;
     display: inline-block;
     border-radius: 3px;
     font-weight: 300;
@@ -474,6 +474,13 @@ svg:not(:root) {
     color: white;
     background: #009bd5;
 }
+
+.pop_up_header{
+    background: #002147;
+    height: 80px;
+    width: 100%;
+}
+
 @keyframes unfoldIn {
     0% {
         transform: scaleY(0.005) scaleX(0);
