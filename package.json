@@ -29,7 +29,8 @@
     "mongoose": "^5.12.3",
     "mongoskin": "^0.3.7",
     "morgan": "^1.10.0",
-    "nodemailer": "^6.5.0",
+    "nodemailer": "^6.7.8",
+    "nodemailer-express-handlebars": "^5.0.0",
     "path": "^0.12.7",
     "request": "^2.88.2",
     "superagent": "^6.1.0"

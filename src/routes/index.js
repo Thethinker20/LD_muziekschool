@@ -53,4 +53,10 @@ router.get("/language_reg", (req, res) => {
     res.render("pages/student/student_audio_neth", { layout: false });
   });
 
+  //email temp
+  router.get("/email_temp", (req, res) => {
+    res.render("email", { layout: false });
+  });
+
+
 module.exports = router;
