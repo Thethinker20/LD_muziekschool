@@ -410,7 +410,7 @@ svg:not(:root) {
 
 #modal-container .modal-background .modal_pre {
     background: white;
-    padding: 0px 50px 50px 50px;
+    padding: 50px;
     display: inline-block;
     border-radius: 3px;
     font-weight: 300;

@@ -6,3 +6,6 @@ ld_davelaar
 rlioEj7CB9tB39Us
 
 swqeaarjbnqhyzxr
+
+aws 
+password: ld123456789@
